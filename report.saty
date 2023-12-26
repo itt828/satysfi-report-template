@@ -1,0 +1,32 @@
+@require: stdjareport
+@require: azmath/azmath
+@require: siunitx/siunitx
+@require: figbox/figbox
+@require: image/image
+@require: easytable/easytable
+@require: azmath/azmath
+@require: latexcmds/latexcmds
+@require: bibyfi/bibyfi
+@require: bibyfi/bibyfi-IEEETran
+@import: local
+@import: class
+
+open FigBox
+open AZMathEquation
+open EasyTableAlias
+in
+
+document(|
+    title = { some title };
+    author = { author name };
+|)'<
+    +chapter { sample chapter } <
+        +section { sample section } <
+            +subsection { sample subsection } <
+                +p { sample text. }
+                +p { \hoge-text;\cite[`samplecite`]; }
+            >
+        >
+    >
+    +makebibliography(bibyfi-theme)(bibs);
+>

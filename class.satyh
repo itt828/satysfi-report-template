@@ -1,0 +1,3 @@
+module Class: sig
+end = struct
+end

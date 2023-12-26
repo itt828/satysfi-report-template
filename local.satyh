@@ -1,0 +1,14 @@
+@require: bibyfi/bibyfi
+@require: bibyfi/bibyfi-IEEETran
+
+let-inline \hoge-text = { ああああああ }
+let bibyfi-theme =
+    BiByFiIEEETran.theme (|
+        name-shrink = true;
+        et-al = true;
+        journal-abbr = [];
+    |)
+let bibs =
+    [
+        (`samplecite`, WildCard({ 引用のサンプル }));
+    ]
